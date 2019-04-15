@@ -1,0 +1,35 @@
+.container{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    width: 100vw;
+    background-color: #00F;
+    height:calc(100vh/3);
+
+}
+
+.con1{
+    width: 25%;
+    border: 2px solid black;
+    background-color: #00F;
+    height:calc(100vh/3);
+
+}
+
+.con2{
+    width: 50%;
+    border: 3px solid black;
+    background-color: #00F;
+    height:calc(100vh/3);
+}
+.con3{
+    width: 25%;
+    border: 3px solid black;
+    border-left: 0px;
+    background-color: #00F;
+    height:calc(100vh/3);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+  <link href="container.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+
+
+  </script>
+
+
+
+  <div class="container">
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="con3"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="con3"></div>
+  </div>
+
+  <div class="container">
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="con3"></div>
+  </div>
+  <script>
+    const r = () => Math.random();
+    const getRandomColor = () => `rgb(${Math.round(255 * r())}, ${Math.round(255 * r())}, ${Math.round(255 * r())})`;
+    const setStyle = node => {
+      node.style.backgroundColor = getRandomColor();
+    }
+
+    const changeColor = (microTime, className) => {
+      document.querySelectorAll(className).forEach(setStyle);
+      setTimeout(() => changeColor(microTime, className), microTime);
+    }
+    changeColor(1000, ".con1");
+    changeColor(1000, ".con2");
+    changeColor(1000, ".con3");
+  </script>
+
+
+
+</body>
+
+</html>
